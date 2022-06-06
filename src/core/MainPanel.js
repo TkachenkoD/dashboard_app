@@ -60,9 +60,9 @@ const MainPanel = (props) => {
       sx={{ borderRight: 1, borderColor: "divider" }}
       className={classes.tabs}
     >
-      <Tab className={classes.tab} label="Dashboard" icon={<DashboardIcon />} iconPosition="start" value="Dashboard" />
-      <Tab className={classes.tab} label="User profile" icon={<PersonIcon />} iconPosition="start" value="User profile" />
-      <Tab className={classes.tab} label="Table list" icon={<ListAltIcon />} iconPosition="start" value="Table list" />
+      <Tab className={classes.tab} label="Dashboard" icon={<DashboardIcon />} iconPosition="start" value="Dashboard" key="1" />
+      <Tab className={classes.tab} label="User profile" icon={<PersonIcon />} iconPosition="start" value="User profile" key="2" />
+      <Tab className={classes.tab} label="Table list" icon={<ListAltIcon />} iconPosition="start" value="Table list" key="3" />
     </Tabs>
   );
 

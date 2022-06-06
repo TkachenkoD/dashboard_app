@@ -11,6 +11,7 @@ import {
   Tooltip,
   Legend
 } from "recharts";
+import { CardContent, Typography, Card } from '@mui/material';
 
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
@@ -27,7 +28,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 export default function RequestLineChart(props) {
 
   return (
-    <div style={{ width: "100%", height: 250 }}>
+    <Typography component="span" variant="body1" style={{ width: "100%", height: 250 }}>
       <ResponsiveContainer>
         <ComposedChart
           width={500}
@@ -58,10 +59,10 @@ export default function RequestLineChart(props) {
           {/* <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" /> */}
           {props.isBarChart
             ? <Bar dataKey="value" barSize={20} fill="#FFF" />
-            : <Line dataKey="value" stroke="#FFF" fill="#FFF" />
+            : <Line dataKey="value" stroke="#FFF" fill="#FFF" strokeWidth={3} />
           }
         </ComposedChart>
       </ResponsiveContainer>
-    </div>
+    </Typography>
   );
 }

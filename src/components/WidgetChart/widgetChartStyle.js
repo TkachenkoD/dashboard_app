@@ -5,7 +5,7 @@ export const useWidgetChartStyle = makeStyles({
   card: {
     position: "relative",
     margin: "auto",
-    minHeight: 400,
+    minHeight: 350,
     overflow: "visible"
   },
   container: {

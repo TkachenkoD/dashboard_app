@@ -6,7 +6,7 @@ export const useWidgetStyle = makeStyles({
     position: "relative",
     // maxWidth: 600,
     margin: "auto",
-    minHeight: 90,
+    minHeight: 70,
     overflow: "visible"
     // marginTop: theme.spacing(5)
   },

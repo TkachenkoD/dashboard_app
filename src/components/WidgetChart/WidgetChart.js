@@ -22,11 +22,11 @@ const WidgetChart = (props) => {
         <Typography variant="h6" style={{ padding: "20px 0px 15px", color: theme.palette.secondary.main }}>
           {props.title}
         </Typography>
-        <Typography variant="body2" component="p" className={classes.descriptionChart}>
+        <Typography component="span" className={classes.descriptionChart}>
           {props.descriptionChart}
         </Typography>
         {!!props.description && (
-          <div style={{ padding: "5px" }}>
+          <Typography component="p" style={{ padding: "5px" }}>
             {/* <Grid container sx={{ color: "grey", marginTop: "10px", borderTop: "1px solid silver", paddingTop: "10px" }}>
               <Grid item style={{ paddingRight: "5px", paddingTop: "3px" }}>
                 <AccessTimeIcon style={{ color: "grey", fontSize: "1.0rem" }} />
@@ -37,15 +37,15 @@ const WidgetChart = (props) => {
                 </Typography>
               </Grid>
             </Grid> */}
-            <div style={{
+            <Typography component="span" style={{
               display: 'flex',
               flexDirection: "row",
               borderTop: `1px solid ${theme.palette.primary.main}`, paddingTop: "10px",
             }}>
               <AccessTimeIcon style={{ color: "grey", fontSize: "1.0rem" }} />
               <span className={classes.description}>{props.description}</span>
-            </div>
-          </div>)
+            </Typography>
+          </Typography>)
         }
       </CardContent>
     </Card >
