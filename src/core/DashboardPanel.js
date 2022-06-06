@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Widget from '../components/Widget/Widget';
 import WidgetChart from '../components/WidgetChart/WidgetChart';
-import TestIcon from '../components/iconComponents/TestIcon';
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 import DateRangeIcon from '@mui/icons-material/DateRange';
@@ -11,7 +10,7 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Box from '@mui/material/Box';
-import { CardContent, CardMedia, Typography, Card } from '@mui/material';
+import { Typography } from '@mui/material';
 
 import Grid from '@mui/material/Grid';
 import { list } from '../reports/api-reports';
@@ -66,16 +65,12 @@ const DashboardPanel = (props) => {
   let countries;
   let avgDate;
   let category;
-  let weekdays;
-  let reportsByCountries;
-  let reportsByCategory;
   let uniq;
   let chartsDatas;
   let chartDataRepoprtByWeek;
   let chartDataRepoprtByCategory;
   let chartDataRepoprtByCountries;
   let extremumDates;
-  let requestsAvgPerDay;
   let vector = "default";
   let strDate;
 
@@ -87,7 +82,6 @@ const DashboardPanel = (props) => {
       if (data && data.error) {
         console.log(data.error);
       } else {
-        console.log('list', data)
         setReport(data);
       }
     })
@@ -99,7 +93,6 @@ const DashboardPanel = (props) => {
 
 
   if (report.length > 0) {
-    // let uniqDate1 = report.length / getUniqDate(report).size;
     uniq = uniqs(report);
     clients = uniq.get('clientid').size;
     countries = uniq.get('countryid').size;
@@ -117,11 +110,6 @@ const DashboardPanel = (props) => {
   } else {
     return <div>loading...</div>
   }
-
-  // const renderVectorIcon = () => {
-  //   // {`${vector} ${avgDate} avg per day`}
-  //   return
-  // }
 
   return (
     <>

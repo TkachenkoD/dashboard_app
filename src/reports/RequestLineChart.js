@@ -3,15 +3,13 @@ import {
   ResponsiveContainer,
   ComposedChart,
   Line,
-  Area,
   Bar,
   XAxis,
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend
 } from "recharts";
-import { CardContent, Typography, Card } from '@mui/material';
+import { Typography } from '@mui/material';
 
 const CustomTooltip = ({ active, payload, label }) => {
   if (active && payload && payload.length) {
@@ -55,8 +53,6 @@ export default function RequestLineChart(props) {
             axisLine={false}
           />
           <Tooltip content={<CustomTooltip />} />
-          {/* <Legend /> */}
-          {/* <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" /> */}
           {props.isBarChart
             ? <Bar dataKey="value" barSize={20} fill="#FFF" />
             : <Line dataKey="value" stroke="#FFF" fill="#FFF" strokeWidth={3} />
