@@ -82,7 +82,7 @@ const DashboardPanel = (props) => {
       if (data && data.error) {
         console.log(data.error);
       } else {
-        console.log("here")
+        console.log("here test2")
         setReport(data);
       }
     })
